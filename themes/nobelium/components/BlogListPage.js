@@ -6,22 +6,22 @@ import Link from 'next/link'
 import BlogPost from './BlogPost'
 
 export const BlogListPage = props => {
-  const { page = 1, posts, postCount } = props
-  const { locale } = useGlobal()
-  const router = useRouter()
-  const totalPage = Math.ceil(postCount / parseInt(siteConfig('POSTS_PER_PAGE')))
-  const currentPage = +page
+    const { page = 1, posts, postCount } = props
+    const { locale } = useGlobal()
+    const router = useRouter()
+    const totalPage = Math.ceil(postCount / parseInt(siteConfig('POSTS_PER_PAGE')))
+    const currentPage = +page
 
-  const showPrev = currentPage > 1
-  const showNext = currentPage < totalPage && posts?.length > 0
-  const pagePrefix = router.asPath.split('?')[0].replace(/\/page\/[1-9]\d*/, '').replace(/\/$/, '')
+    const showPrev = currentPage > 1
+    const showNext = currentPage < totalPage && posts?.length > 0
+    const pagePrefix = router.asPath.split('?')[0].replace(/\/page\/[1-9]\d*/, '').replace(/\/$/, '')
 
-  return (
-      <div className="w-full md:pr-12 my-6">
+    return (
+        <div className="w-full my-6">
 
             <div id="posts-wrapper">
                 {posts?.map(post => (
-                   <BlogPost key={post.id} post={post}/>
+                    <BlogPost key={post.id} post={post} />
                 ))}
             </div>
 
@@ -31,8 +31,8 @@ export const BlogListPage = props => {
                     className={`${showPrev ? '  ' : ' invisible block pointer-events-none '}no-underline py-2 px-3 rounded`}>
 
                     <button rel="prev" className="block cursor-pointer">
-                    ← {locale.PAGINATION.PREV}
-                     </button>
+                        ← {locale.PAGINATION.PREV}
+                    </button>
 
                 </Link>
                 <Link
@@ -40,11 +40,11 @@ export const BlogListPage = props => {
                     className={`${showNext ? '  ' : 'invisible pointer-events-none '}  no-underline py-2 px-3 rounded`}>
 
                     <button rel="next" className="block cursor-pointer">
-                    {locale.PAGINATION.NEXT} →
+                        {locale.PAGINATION.NEXT} →
                     </button>
 
                 </Link>
             </div>
         </div>
-  )
+    )
 }
