@@ -78,7 +78,7 @@ const BLOG = {
       // 衬线字体 例如'"LXGW WenKai"'
       FONT_SERIF: [
             // '"LXGW WenKai"',
-            'iconfont',
+            'webfont',
             '"Noto Serif SC"',
             'SimSun',
             '"Times New Roman"',
