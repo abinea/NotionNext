@@ -765,8 +765,8 @@ code[class*='language-'] {
   display: block;
   box-sizing: border-box;
   overflow: auto;
-  font-family: Menlo, 'Hacki0', 'SFMono-Regular', Consolas, 'Liberation Mono',
-    Courier, monospace;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
   @apply w-full mb-0 dark:bg-black !important;
 }
 

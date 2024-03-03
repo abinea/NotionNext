@@ -221,7 +221,7 @@ const LayoutSlug = props => {
       {lock && <ArticleLock validPassword={validPassword} />}
 
       {!lock &&
-        <div className='flex'>
+        <div className='xl:flex'>
           <div id="article-wrapper" className="px-2 max-w-3xl">
             <ArticleInfo post={post} />
             <NotionPage post={post} />

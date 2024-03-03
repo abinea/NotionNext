@@ -37,3 +37,8 @@
   font-weight: bold;
   font-style: italic;
 }
+
+div.code-toolbar code[class*='language-'],
+pre[class*='language-'] {
+  font-family: Menlo, 'Hacki0', 'SFMono-Regular';
+}
