@@ -222,7 +222,7 @@ const LayoutSlug = props => {
 
       {!lock &&
         <div className='xl:flex'>
-          <div id="article-wrapper" className="px-2 max-w-3xl">
+          <div id="article-wrapper" className="px-2 max-w-3xl min-w-full">
             <ArticleInfo post={post} />
             <NotionPage post={post} />
             <ShareBar post={post} />

@@ -19,7 +19,7 @@ export const Footer = (props) => {
     <div className="my-4 text-sm leading-6">
       <div className="flex align-baseline justify-between flex-wrap">
         <p>
-          ©  {copyrightDate} {siteConfig('AUTHOR')} |  {siteConfig("BEI_AN")}
+          ©  {copyrightDate} {siteConfig('AUTHOR')} |  {siteConfig('BEI_AN')}
         </p>
         <Vercel />
       </div>
