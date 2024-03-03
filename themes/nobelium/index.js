@@ -218,20 +218,20 @@ const LayoutSlug = props => {
   }, [post])
   return (
     <>
-
       {lock && <ArticleLock validPassword={validPassword} />}
 
-      {!lock && <div id="article-wrapper" className="px-2">
-        <>
+      {!lock &&
+        <div className='flex'>
+          <div id="article-wrapper" className="px-2 max-w-3xl">
+            <ArticleInfo post={post} />
+            <NotionPage post={post} />
+            <ShareBar post={post} />
+            <Comment frontMatter={post} />
+            <ArticleFooter />
+          </div>
           <TocDrawer {...props} />
-          <ArticleInfo post={post} />
-          <NotionPage post={post} />
-          <ShareBar post={post} />
-          <Comment frontMatter={post} />
-          <ArticleFooter />
-        </>
-      </div>}
-
+        </div>
+      }
     </>
   )
 }
