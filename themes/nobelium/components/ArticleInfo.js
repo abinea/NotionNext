@@ -6,11 +6,11 @@ import { siteConfig } from '@/lib/config'
 import NotionIcon from '@/components/NotionIcon'
 
 export const ArticleInfo = (props) => {
-  const { post } = props
+    const { post } = props
 
-  const emailHash = md5(siteConfig('CONTACT_EMAIL', '#'))
+    const emailHash = md5(siteConfig('CONTACT_EMAIL', '#'))
 
-  return <section className="flex-wrap flex mt-2 text-gray--600 dark:text-gray-400 font-light leading-8">
+    return <section className="flex-wrap flex mt-2 text-gray--600 dark:text-gray-400 font-light leading-8">
         <div>
 
             <h1 className="font-bold text-3xl text-black dark:text-white">
