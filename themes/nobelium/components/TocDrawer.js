@@ -15,7 +15,7 @@ const TocDrawer = ({ post, cRef }) => {
     <div
       className='max-xl:hidden rounded py-2 bg-white dark:bg-hexo-black-gray'>
       {post && <>
-        <div className='dark:text-gray-400 text-gray-600 sticky top-1/4 pl-14 h-96 p-3'>
+        <div className='dark:text-gray-400 text-gray-600 sticky top-[20%] pl-20 h-96 p-3'>
           <Catalog post={post} />
         </div>
       </>}

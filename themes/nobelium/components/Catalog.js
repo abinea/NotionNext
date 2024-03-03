@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import throttle from 'lodash.throttle'
 import { uuidToId } from 'notion-utils'
 import { isBrowser } from '@/lib/utils'
+import { useGlobal } from '@/lib/global'
 
 /**
  * 目录导航组件
@@ -10,6 +11,7 @@ import { isBrowser } from '@/lib/utils'
  * @constructor
  */
 const Catalog = ({ post }) => {
+  const { locale } = useGlobal()
   const toc = post?.toc
   // 同步选中目录事件
   const [activeSection, setActiveSection] = useState(null)
@@ -62,6 +64,7 @@ const Catalog = ({ post }) => {
   }
 
   return <>
+    <div className='w-full font-bold'><i className='mr-1 fas fa-stream' />{locale.COMMON.TABLE_OF_CONTENTS}</div>
     <div id='toc-wrapper' className='toc-wrapper overflow-y-auto my-2 max-h-80 overscroll-none scroll-hidden'>
       <nav className='h-full  text-black'>
         {toc.map((tocItem) => {
