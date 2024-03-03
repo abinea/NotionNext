@@ -10,4 +10,5 @@
 @font-face {
   font-family: 'webfont';
   src: url('../webfonts/webfont.woff2');
+  font-weight: normal;
 }
