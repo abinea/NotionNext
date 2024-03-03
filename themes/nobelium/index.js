@@ -9,6 +9,7 @@ import Announcement from './components/Announcement'
 import { BlogListPage } from './components/BlogListPage'
 import { BlogListScroll } from './components/BlogListScroll'
 import { deepClone, isBrowser } from '@/lib/utils'
+import TocDrawer from './components/TocDrawer'
 import SearchNavBar from './components/SearchNavBar'
 import BlogArchiveItem from './components/BlogArchiveItem'
 import { ArticleLock } from './components/ArticleLock'
@@ -222,6 +223,7 @@ const LayoutSlug = props => {
 
       {!lock && <div id="article-wrapper" className="px-2">
         <>
+          <TocDrawer {...props} />
           <ArticleInfo post={post} />
           <NotionPage post={post} />
           <ShareBar post={post} />
